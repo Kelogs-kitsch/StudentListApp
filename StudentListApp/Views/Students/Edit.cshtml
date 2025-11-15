@@ -1,27 +1,28 @@
 ﻿
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
 @model StudentListApp.Models.Student
 
-<h2>Add Student</h2>
+<h2>Edit Student</h2>
 
 <form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
 
     <div class="form-group">
         <label>Name</label>
-        <input type="text" class="form-control" name="Name" required />
+        <input type="text" class="form-control" name="Name" value="@Model.Name" required />
     </div>
 
     <div class="form-group">
         <label>Age</label>
-        <input type="number" class="form-control" name="Age" required />
+        <input type="number" class="form-control" name="Age" value="@Model.Age" required />
     </div>
 
     <div class="form-group">
         <label>Course</label>
-        <input type="text" class="form-control" name="Course" required />
+        <input type="text" class="form-control" name="Course" value="@Model.Course" required />
     </div>
 
     <br />
